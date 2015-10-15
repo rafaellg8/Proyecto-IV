@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>PLUCO by rafaellg8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">PLUCO</h1>
+      <h2 class="project-tagline">Plataforma Universitaria Compartición de Conocimiento</h2>
+      <a href="https://github.com/rafaellg8/Proyecto-IV" class="btn">View on GitHub</a>
+      <a href="https://github.com/rafaellg8/Proyecto-IV/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/rafaellg8/Proyecto-IV/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="infraestructura-virtual" class="anchor" href="#infraestructura-virtual" aria-hidden="true"><span class="octicon octicon-link"></span></a>INFRAESTRUCTURA VIRTUAL</h1>
+
+<h1>
+<a id="plataforma-universitaria-de-comparticiÓn-de-conocimientos-pluco" class="anchor" href="#plataforma-universitaria-de-compartici%C3%93n-de-conocimientos-pluco" aria-hidden="true"><span class="octicon octicon-link"></span></a>PLATAFORMA UNIVERSITARIA DE COMPARTICIÓN DE CONOCIMIENTOS: PLUCO</h1>
+
+<h3>
+<a id="introducción" class="anchor" href="#introducci%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introducción</h3>
+
+<p>Se trata de una plataforma académica de compartición de archivos de la Universidad de Granada, que permite la colaboración en grupo entre los usuarios del sistema. Ofrece servicios de almacenamiento de archivos en la nube, y de mensajería y foros para la resolución de dudas, potenciando la interacción de los usuarios, y agrupando a los mismos por grupos, por ejemplo de asignaturas o cursos.</p>
+
+<h3>
+<a id="seguridad" class="anchor" href="#seguridad" aria-hidden="true"><span class="octicon octicon-link"></span></a>Seguridad</h3>
+
+<p>En cuanto a la seguridad de nuestra plataforma los objetivos son: Permitir tener un sistema seguro en el que se separen datos sensibles y credenciales de los usuarios, y por otra parte archivos de los mismos. Además tendremos una web con foros que si es atacada no compremete la privacidad de los usuarios ni sus archivos.</p>
+
+<h3>
+<a id="infraestuctura" class="anchor" href="#infraestuctura" aria-hidden="true"><span class="octicon octicon-link"></span></a>Infraestuctura</h3>
+
+<p>En principio cada servicio que vamos a ofrecer se va a desarrollar en un servidor independiente y que será desarrollado por cada componente del grupo:</p>
+
+<ol>
+<li><p>Red Social y soporte Sistema Web. Implementación de una red social en la que los usuarios puedan participar en la compartición del conocimiento y apoyo en problemas que puedan surgir en las asignaturas o tareas determinadas. Para ello se implementará un sistema web en Azure, con un servidor al que se conectarán los usuarios y hará de frontend, y que contendrá la información de asignaturas asociadas a cada usuario y de los foros en los que participa. Todo está información estará en una base de datos independiente que a su vez, se complementará con la base de datos general que creará mi compañero con información más exhaustiva.</p></li>
+<li><p>Gestión de bases de datos de usuarios. Consistirá en un despliegue sobre Azure de un sistema de organización y gestión de datos de los usuarios de la plataforma, y que permitirá recuperar la información de los usuarios, consultar sus datos asociados, modificar los datos, además de los procesos asociados a dar de alta o baja a los usuarios. Irá instalado sobre una máquina virtual que actúa como servidor, y que tendrá acceso a la información almacenada mediante una página web, cuyo servidor web podría estar alojado en un servidor distinto al de la base de datos, con el objetivo de repartir la carga y dar mayor seguridad a la infraestructura. La base de datos usada será MySQL y que deberá contener información sobre las asignaturas matriculadas e información personal de los usuarios. </p></li>
+<li><p>Sistema de almacenamiento sftp de recursos en la nube. Realización de un sistema de almacenamiento sftp de recursos en la nube, que se usará para la organización, administración y compartición de archivos. Tendremos al final un servicio de almacenamiento y compartición de recursos en la nube, donde cada usuario podrá subir sus propios archvivos y compartirlos con los demás usuarios. Habrá que implementar un registro asociado a los usuarios que se dan de alta en la nube para permitir subir los mismos. Todo esto irá sobre otro servidor que usaremos de Cloud Storage de Azure, además de la web asociada a este servicio, y sus tablas de datos asociadas también.</p></li>
+</ol>
+
+<p>Como lenguaje de programación se usará Python. Además utilizaremos Django como framework para agilizar el desarrollo web.  </p>
+
+<p>Al final del proyecto, deberemos enlazar en conjunto las tres partes del proyecto, y realizar el despliegue correcto sobre cualquier infraestructura virtual.</p>
+
+<h3>
+<a id="participantes" class="anchor" href="#participantes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Participantes</h3>
+
+<p>Rafael Lachica Garrido</p>
+
+<p>Rubén Martín Hidalgo</p>
+
+<p>Miguel Fernández Fernández</p>
+
+<p><a href="http://osl.ugr.es/bases-de-los-premios-a-proyectos-libres-de-la-ugr/">Apuntados en el proyecto de software libre de la oficina OSL</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/rafaellg8/Proyecto-IV">PLUCO</a> is maintained by <a href="https://github.com/rafaellg8">rafaellg8</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
